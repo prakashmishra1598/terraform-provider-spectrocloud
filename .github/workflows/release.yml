@@ -59,4 +59,4 @@ jobs:
           token: ${{ secrets.Crossplane-TF-personal-forks-access }}
           repository: prakashmishra1598/provider-jet-palette
           event-type: terraform-new-release
-          client-payload: '{"release_version": "${{ v0.11.0 }}"}'
+          client-payload: '{"release_version": "v0.11.0-pre"}'
