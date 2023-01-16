@@ -36,4 +36,4 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: prakashmishra1598/provider-jet-palette
           event-type: terraform-new-release
-          client-payload: '{"release_version": "${{ github.ref }}"}'
+          client-payload: '{"release_version": "${{ github.ref_name }}"}'
