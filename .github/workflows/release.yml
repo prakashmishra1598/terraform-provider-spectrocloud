@@ -51,3 +51,12 @@ jobs:
         env:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - 
+        name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.Crossplane-TF-personal-forks-access }}
+          repository: prakashmishra1598/provider-jet-palette
+          event-type: terraform-new-release
+          client-payload: '{"release_version": "${{ v0.11.0 }}"}'
