@@ -33,7 +33,7 @@ jobs:
         name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.Crossplane-TF-personal-forks-access }}
+          token: ${{ secrets.PAT }}
           repository: prakashmishra1598/provider-jet-palette
           event-type: terraform-new-release
           client-payload: '{"release_version": "${{ github.ref }}"}'
